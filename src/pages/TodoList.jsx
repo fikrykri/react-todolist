@@ -12,16 +12,21 @@ const TodoList = () => {
     { text: "Learning React!" },
   ]);
 
+  const [showAdd, setShowAdd] = useState(false);
+
   const addTodo = (value) => {
     const addedTodo = [...todos, { text: value }]; //membuat sebuah array baru apapun yang ada didalam todos state
-    
+
     setTodos(addedTodo);
   };
 
-  return ( 
+  // membuat button on dan of
+  const showAddToggle = () => setShowAdd(!showAdd);
+
+  return (
     <Paper>
-      <Header />
-      <TodoForm addTodo={addTodo}/>
+      <Header showAddToggle={showAddToggle} />
+      <TodoForm addTodo={addTodo} />
       <Todos todos={todos} />
     </Paper>
   );
