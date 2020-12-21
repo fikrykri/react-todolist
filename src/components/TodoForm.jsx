@@ -12,6 +12,13 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return alert("No blank todo!");
     }
 
+    // supaya user tidak memberikan todo input melebiho 40 karakter
+    if (value.length > 40) {
+      alert("Please create a shorter todo text!");
+      setValue("");
+      return;
+    }
+
     addTodo(value);
     setValue("");
   };
@@ -38,7 +45,7 @@ const TodoForm = ({ addTodo, showAdd }) => {
 
 TodoForm.propTypes = {
   addTodo: PropTypes.func.isRequired,
-  showAdd: PropTypes.bool.isRequired
+  showAdd: PropTypes.bool.isRequired,
 };
 
 export default TodoForm;
