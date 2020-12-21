@@ -1,15 +1,45 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const Todos = ({ children }) => {
-  return <section className="todos">{children}</section>;
-};
+import Todo from "./Todo";
 
-Todos.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+const Todos = () => {
+  const todos = [
+    {
+      text: "Belajar Reactsssssss",
+    },
+    {
+      text: "Belajar React",
+    },
+    {
+      text: "Belajar React",
+    },
+    {
+      text: "Belajar React",
+    },
+    {
+      text: "Belajar React",
+    },
+    {
+      text: "Belajar React",
+    },
+    {
+      text: "Belajar React",
+    },
+    {
+      text: "Belajar React",
+    },
+    {
+      text: "Belajar React",
+    },
+  ];
+
+  return (
+    <section className="todos">
+      {todos.map(todo => {
+        return <Todo text={todo.text} />;
+      })}
+    </section>
+  );
 };
 
 export default Todos;
