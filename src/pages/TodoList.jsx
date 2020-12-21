@@ -12,11 +12,17 @@ const TodoList = () => {
     { text: "Learning React!" },
   ]);
 
-  return (
+  const addTodo = (value) => {
+    const addedTodo = [...todos, { text: value }]; //membuat sebuah array baru apapun yang ada didalam todos state
+    
+    setTodos(addedTodo);
+  };
+
+  return ( 
     <Paper>
       <Header />
-      <TodoForm />
-      <Todos todos={todos}/>
+      <TodoForm addTodo={addTodo}/>
+      <Todos todos={todos} />
     </Paper>
   );
 };
