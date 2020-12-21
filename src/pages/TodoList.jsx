@@ -7,15 +7,15 @@ import Todos from "../components/Todos";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([
-    { text: "Learning React!" },
-    { text: "Learning React!" },
-    { text: "Learning React!" },
+    { text: "Learning React!", isCompleted: false },
+    { text: "Learning React!", isCompleted: false },
+    { text: "Learning React!", isCompleted: false },
   ]);
 
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = (value) => {
-    const addedTodo = [...todos, { text: value }]; //membuat sebuah array baru apapun yang ada didalam todos state
+    const addedTodo = [...todos, { text: value, isCompleted: false }]; //membuat sebuah array baru apapun yang ada didalam todos state
 
     setTodos(addedTodo);
   };
@@ -23,11 +23,18 @@ const TodoList = () => {
   // membuat button on dan of
   const showAddToggle = () => setShowAdd(!showAdd);
 
+  const completeTodo = (index) => {
+    const addedTodo = [...todos];
+    addedTodo[index].isCompleted = !addedTodo[index].isCompleted;
+
+    setTodos(addedTodo);
+  }
+
   return (
     <Paper>
       <Header showAddToggle={showAddToggle} showAdd={showAdd} />
       <TodoForm addTodo={addTodo} showAdd={showAdd} />
-      <Todos todos={todos} />
+      <Todos todos={todos} completeTodo={completeTodo}/>
     </Paper>
   );
 };
