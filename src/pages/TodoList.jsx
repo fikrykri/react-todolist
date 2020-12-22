@@ -15,9 +15,15 @@ const TodoList = () => {
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = (value) => {
-    const addedTodo = [...todos, { text: value, isCompleted: false }]; //membuat sebuah array baru apapun yang ada didalam todos state
 
-    setTodos(addedTodo);
+    // limitasi penambahan todos agar tidak melebihi paper
+    if (todos.length < 9) {
+      const addedTodo = [...todos, { text: value, isCompleted: false }]; //membuat sebuah array baru apapun yang ada didalam todos state
+
+      setTodos(addedTodo);
+    } else {
+      alert("Only 10 todos is allowed!");
+    }
   };
 
   // membuat button on dan of
@@ -28,13 +34,13 @@ const TodoList = () => {
     addedTodo[index].isCompleted = !addedTodo[index].isCompleted;
 
     setTodos(addedTodo);
-  }
+  };
 
   return (
     <Paper>
       <Header showAddToggle={showAddToggle} showAdd={showAdd} />
       <TodoForm addTodo={addTodo} showAdd={showAdd} />
-      <Todos todos={todos} completeTodo={completeTodo}/>
+      <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
   );
 };

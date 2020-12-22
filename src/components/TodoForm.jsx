@@ -20,6 +20,7 @@ const TodoForm = ({ addTodo, showAdd }) => {
     }
 
     addTodo(value);
+
     setValue("");
   };
 
