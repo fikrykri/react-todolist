@@ -47,22 +47,6 @@ html {
   justify-content: space-between;
 }
 
-.header {
-  display: flex;
-  align-items: flex-start;
-}
-
-.header-title {
-  /* flex: 1; mengambil lebar container flex display yang kosong menjadi miliknya */
-  width: 52%;
-  text-align: center;
-
-  color: var(--main-black-color);
-  font-size: 3.6rem;
-  font-family: "Homemade Apple", sans-serif;
-  text-transform: lowercase;
-}
-
 .add {
   padding: 16px;
 }
