@@ -15,14 +15,13 @@ const TodoList = () => {
   const [showAdd, setShowAdd] = useState(false);
 
   const addTodo = (value) => {
-
     // limitasi penambahan todos agar tidak melebihi paper
     if (todos.length < 9) {
       const addedTodo = [...todos, { text: value, isCompleted: false }]; //membuat sebuah array baru apapun yang ada didalam todos state
 
       setTodos(addedTodo);
     } else {
-      alert("Only 10 todos is allowed!");
+      alert("Only 9 todos is allowed!");
     }
   };
 
@@ -36,9 +35,15 @@ const TodoList = () => {
     setTodos(addedTodo);
   };
 
+  const clearTodos = () => setTodos([]);
+
   return (
     <Paper>
-      <Header showAddToggle={showAddToggle} showAdd={showAdd} />
+      <Header
+        showAddToggle={showAddToggle}
+        showAdd={showAdd}
+        clearTodos={clearTodos}
+      />
       <TodoForm addTodo={addTodo} showAdd={showAdd} />
       <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
