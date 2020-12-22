@@ -1,4 +1,5 @@
 import React from "react";
+import { css } from "@emotion/core";
 import PropTypes from "prop-types";
 
 import Button from "../button/Button";
@@ -14,7 +15,7 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
         color="black"
         align="left"
       />
-      <h1 className={styles.headerTitle}>Todo Lists</h1>
+      <h1 className={styles.headerTitle} css={css`color: red;`}>Todo Lists</h1>
       <Button text="Clear" onClick={clearTodos} color="red" align="right" />
 
       {/* code dibawah merupakan penggunaan button tanpa components react */}
