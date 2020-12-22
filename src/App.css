@@ -28,21 +28,158 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.todos {
+
+/* .mainRedColor {
+  color: var(--main-red-color);
+}
+
+.mainBlackColor {
+  color: var(--main-black-color);
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.headerBtn {
+  width: 24%;
+  font-size: 1.8rem;  */
+  /* rem disini sama dengan 18px. rumusnya 1.8 * font-size dari html yaitu 10 */
+  /* font-family: "Bungee", sans-serif;
+
+  padding: 16px;
+  cursor: pointer;
+
+  background: unset;
+  border: unset;
+  outline: unset;
+}
+
+.headerBtn.mainRedColor:active {
+  text-shadow: 1px 1px 2px var(--main-red-color);
+}
+
+.headerBtn.mainBlackColor:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+} */
+
+/* .container {
+  width: 600px;
+  height: 800px;
+  background-color: #f2eecb;
+  border-radius: 4px;
+
+  padding: 32px;
+}
+
+.frame {
+  border: 1px solid var(--main-black-color);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+/*.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+ .headerTitle {
+  flex: 1;
+  mengambil lebar container flex display yang kosong menjadi miliknya
+  width: 52%;
+  text-align: center;
+
+
+  color: var(--main-black-color);
+  font-size: 3.6rem;
+  font-family: "Homemade Apple", sans-serif;
+  text-transform: lowercase;
+} */
+
+/* .add {
+  padding: 16px;
+}
+
+.addForm {
+  display: flex;
+  align-items: flex-start;
+}
+
+.addInput {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
+
+  flex: 1;
+  border-bottom: 1px solid var(--main-red-color);
+  outline: unset;
+
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 16px;
+  text-transform: lowercase;
+}
+
+.addBtn {
+  font-size: 1.8rem;
+  font-family: "Bungee", sans-serif;
+
+  padding: 16px;
+  padding-right: unset;
+  cursor: pointer;
+
+  background: unset;
+  border: unset;
+  outline: unset;
+}
+
+.addBtn:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+} */
+
+/* .todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  max-height: 34px;
+  margin: 16px 0 0;
+  font-family: "Homemade Apple", sans-serif;
+  font-size: 24px;
+
+  border-bottom: 1px solid var(--main-red-color);
+}
+
+.todoText {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+} */
+
+/* .todos {
   display: flex;
   flex-direction: column;
 
   min-height: 500px;
 }
 
-.todo-placeholder-text {
+.todoPlaceholderText {
   font-family: 'Homemade Apple', sans-serif;
   font-size: 24px;
   text-align: center;
   padding: 16px;
 }
 
-.add-button-placeholder-text{
+.addButtonPlaceholderText{
   font-family: 'Bungee', sans-serif;
   font-size: 24px;
-}
+} */
