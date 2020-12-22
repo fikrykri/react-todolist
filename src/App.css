@@ -15,6 +15,14 @@
   color: var(--main-black-color);
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 html {
   font-size: 10px;
 }
@@ -61,7 +69,8 @@ html {
 }
 
 .header-title {
-  flex: 1; /* mengambil lebar container flex display yang kosong menjadi miliknya*/
+  /* flex: 1; mengambil lebar container flex display yang kosong menjadi miliknya */
+  width: 52%;
   text-align: center;
 
   color: var(--main-black-color);
@@ -71,6 +80,7 @@ html {
 }
 
 .header-btn {
+  width: 24%;
   font-size: 1.8rem; /* rem disini sama dengan 18px. rumusnya 1.8 * font-size dari html yaitu 10*/
   font-family: "Bungee", sans-serif;
 

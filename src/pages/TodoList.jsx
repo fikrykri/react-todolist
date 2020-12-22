@@ -35,7 +35,8 @@ const TodoList = () => {
     setTodos(addedTodo);
   };
 
-  const clearTodos = () => setTodos([]);
+  const clearTodos = () => !showAdd && setTodos([]); 
+  // code diatas jika showAdd tidak false / true maka dia akan return setTodos
 
   return (
     <Paper>
