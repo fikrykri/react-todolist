@@ -15,7 +15,7 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return alert("No blank todo!");
     }
 
-    // supaya user tidak memberikan todo input melebiho 40 karakter
+    // supaya user tidak memberikan todo input melebihi 40 karakter
     if (value.length > 40) {
       alert("Please create a shorter todo text!");
       setValue("");

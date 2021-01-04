@@ -7,7 +7,11 @@ import cx from "classnames";
  * dependenci classnames ini berfungi untuk menampung classnames/library classnames
  */
 
-import styles from "./button.module.css";
+ //import css button module
+// import styles from "./button.module.css";
+
+// import css in js
+import * as styles from './button.styles';
 
 const Button = ({ text, onClick, color, align }) => {
   // code dibawah tanpa menggunakan css module dan cssnya terdapat diglobal css
@@ -20,18 +24,25 @@ const Button = ({ text, onClick, color, align }) => {
   // ].join(" ");
   
   // Penggunaan css module dari react
-  const classNames = cx(styles.headerBtn, {
-    [styles.mainBlackColor]: color === "black",
-    [styles.mainRedColor]: color === "red",
-    [styles.alignLeft]: align === "left",
-    [styles.alignRight]: align === "right"
-  });
+  // const classNames = cx(styles.headerBtn, {
+  //   [styles.mainBlackColor]: color === "black",
+  //   [styles.mainRedColor]: color === "red",
+  //   [styles.alignLeft]: align === "left",
+  //   [styles.alignRight]: align === "right"
+  // });
+
   /**
  * join diatas memberikan spasi antar index/item pada array agar 
  * komponen pada array bisa dijalankan oleh classname
  */
   return (
-    <button className={classNames} onClick={onClick}>
+    // penggunaan css module
+    // <button className={classNames} onClick={onClick}>
+    //   {text}
+    // </button>
+
+    // penggunaan css in js
+    <button css={styles.button({ align, color })} onClick={onClick}>
       {text}
     </button>
   );
