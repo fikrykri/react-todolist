@@ -7,9 +7,14 @@ const theme = {
   color: {
     primary: {
       black: "#484848",
-      red: "#e06262"
-    }
-  }
+      red: "#e06262",
+    },
+  },
+  background: {
+    color: {
+      primary: "#f2eecb",
+    },
+  },
 };
 
 function App() {

@@ -7,7 +7,7 @@ export const header = () =>
   `;
 
 
-export const headerTitle = (theme) =>
+export const headerTitle = ({theme}) =>
   css`
     width: 52%;
     text-align: center;
