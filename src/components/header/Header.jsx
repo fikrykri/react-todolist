@@ -1,21 +1,25 @@
 import React from "react";
-import { css } from "@emotion/core";
 import PropTypes from "prop-types";
 
 import Button from "../button/Button";
-import styles from "./header.module.css";
+
+// import styles css module
+// import styles from "./header.module.css";
+
+// import styles css in js
+import * as styles from './header.styles';
 
 const Header = ({ showAddToggle, showAdd, clearTodos }) => {
 
   return (
-    <section className={styles.header}>
+    <section css={styles.header}>
       <Button
         text={showAdd ? "Finish" : "Add"}
         onClick={showAddToggle}
         color="black"
         align="left"
       />
-      <h1 className={styles.headerTitle} css={css`color: red;`}>Todo Lists</h1>
+      <h1 css={styles.headerTitle}>Todo Lists</h1>
       <Button text="Clear" onClick={clearTodos} color="red" align="right" />
 
       {/* code dibawah merupakan penggunaan button tanpa components react */}

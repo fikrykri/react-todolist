@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+// import cx from "classnames";
 /**
  * note untuk classnames harus diinstal lewat terminal klo offline
  * menggunakan vscode "npm install classnames --save"
