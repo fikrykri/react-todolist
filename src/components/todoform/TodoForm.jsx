@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useTheme } from "@emotion/react";
 
+import Container from "../../layout/Container";
+import Item from "../../layout/Item";
+import Button from "../button/Button";
+
 // import styles from "./todoform.module.css";
 import * as styles from "./todoForm.styles";
 
@@ -33,15 +37,22 @@ const TodoForm = ({ addTodo, showAdd }) => {
   // jika showAdd true maka kondisi if dibawah dijalankan
   if (showAdd) {
     return (
-      <section css={styles.todoForm}>
-        <form css={styles.addForm} onSubmit={handleFormSubmit}>
-          <input
-            type="text"
-            css={styles.addInput({theme})}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-          />
-          <button css={styles.addBtn({theme})}>Add</button>
+      <section className="todoform-component">
+        <form onSubmit={handleFormSubmit}>
+          <Container alignItems="center">
+            <Item flex={1} padding="0 0 0 16px">
+              <input
+                type="text"
+                css={styles.addInput({ theme })}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+              />
+            </Item>
+            <Item>
+              {/* <button css={styles.addBtn({ theme })}>Add</button> */}
+              <Button text="Add"/>
+            </Item>
+          </Container>
         </form>
       </section>
     );

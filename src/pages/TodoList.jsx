@@ -18,12 +18,12 @@ const TodoList = () => {
 
   const addTodo = (value) => {
     // limitasi penambahan todos agar tidak melebihi paper
-    if (todos.length < 9) {
+    if (todos.length < 10) {
       const addedTodo = [...todos, { text: value, isCompleted: false }]; //membuat sebuah array baru apapun yang ada didalam todos state
 
       setTodos(addedTodo);
     } else {
-      alert("Only 9 todos is allowed!");
+      alert("Only 10 todos is allowed!");
     }
   };
 
