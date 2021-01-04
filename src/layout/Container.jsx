@@ -2,7 +2,15 @@ import React from "react";
 import { css } from "@emotion/core";
 import PropTypes from "prop-types";
 
-const Container = ({ children, flexDirection, flexWrap, justifyContent, alignItems, alignContent}) => {
+const Container = ({
+  children,
+  flexDirection,
+  flexWrap,
+  justifyContent,
+  alignItems,
+  alignContent,
+  height
+}) => {
   const containerStyles = css`
     display: flex;
     flex-direction: ${flexDirection};
@@ -10,6 +18,7 @@ const Container = ({ children, flexDirection, flexWrap, justifyContent, alignIte
     justify-content: ${justifyContent};
     align-items: ${alignItems};
     align-content: ${alignContent};
+    height: ${height}
   `;
   return (
     <div className="flex-container" css={containerStyles}>
@@ -23,25 +32,22 @@ Container.defaultProps = {
   flexWrap: "nowrap",
   justifyContent: "flex-start",
   alignItems: "stretch",
-  alignContent: "stretch"
+  alignContent: "stretch",
+  height: "auto"
 };
 
 Container.prototype = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   flexDirection: PropTypes.oneOf([
     "row",
     "row-reverse",
     "column",
-    "column-reverse"
+    "column-reverse",
   ]),
-  flexWrap: PropTypes.oneOf([
-    "nowrap",
-    "wrap",
-    "wrap-reverse"
-  ]),
+  flexWrap: PropTypes.oneOf(["nowrap", "wrap", "wrap-reverse"]),
   justifyContent: PropTypes.oneOf([
     "flex-start",
     "flex-end",
@@ -52,7 +58,7 @@ Container.prototype = {
     "start",
     "end",
     "right",
-    "left"
+    "left",
   ]),
   alignItems: PropTypes.oneOf([
     "stretch",
@@ -65,7 +71,7 @@ Container.prototype = {
     "start",
     "end",
     "self-start",
-    "self-end"
+    "self-end",
   ]),
   alignContent: PropTypes.oneOf([
     "stretch",
@@ -79,8 +85,11 @@ Container.prototype = {
     "end",
     "baseline",
     "first baseline",
-    "last baseline"
+    "last baseline",
+  ]),
+  height: PropTypes.oneOfType([
+    PropTypes.number, PropTypes.string
   ])
-}
+};
 
 export default Container;
