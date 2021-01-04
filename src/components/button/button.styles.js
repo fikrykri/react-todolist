@@ -5,18 +5,26 @@ import { css } from "@emotion/core";
  * npm install @emotion/babel-preset-css-prop --save-dev
  */
 
-export const button = ({ color, align }) => {
+export const button = ({ color, align, theme }) => {
   let textColor;
+
+  // pengambilan color primary dalam object theme di app js dengan short hand
+  const {
+    color: { primary }
+  } = theme;
+  // code diatas sama halnya dengan "theme.color.primary" tetapi code di atas
+  // mengambil primary key nya untuk diguna kan berulang kali
+
 
   switch (color) {
     case "black":
-      textColor = "#484848";
+      textColor = primary.black;
       break;
     case "red":
-      textColor = "#e06262";
+      textColor = primary.red;
       break;
     default:
-      textColor = "#484848";
+      textColor = primary.black;
       break;
   }
   return css`

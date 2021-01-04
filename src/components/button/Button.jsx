@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useTheme } from "@emotion/react";
+
 // import cx from "classnames";
 /**
  * note untuk classnames harus diinstal lewat terminal klo offline
@@ -35,6 +37,9 @@ const Button = ({ text, onClick, color, align }) => {
  * join diatas memberikan spasi antar index/item pada array agar 
  * komponen pada array bisa dijalankan oleh classname
  */
+
+  const theme = useTheme();
+
   return (
     // penggunaan css module
     // <button className={classNames} onClick={onClick}>
@@ -42,7 +47,7 @@ const Button = ({ text, onClick, color, align }) => {
     // </button>
 
     // penggunaan css in js
-    <button css={styles.button({ align, color })} onClick={onClick}>
+    <button css={styles.button({ align, color, theme })} onClick={onClick}>
       {text}
     </button>
   );
